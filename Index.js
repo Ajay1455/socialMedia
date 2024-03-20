@@ -136,6 +136,8 @@ app.use('/graphql', graphqlHTTP({
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (port) {
+  app.listen(port, () => {
+    console.log(`Listening to port ....${port}`);
+  });
+}
